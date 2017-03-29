@@ -8,7 +8,7 @@ public:
 	Paladin(std::string name);
 	~Paladin();
 
-	std::string GetName() const { return _name; }
+	std::string GetName() const { return _name; } //tells the compiler that we wont change name
 	std::string Attack() { return _name + " swings a giant maul at his foes!"; }
 };
 

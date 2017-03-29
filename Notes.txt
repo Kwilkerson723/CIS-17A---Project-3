@@ -1,0 +1,146 @@
+Memory Leaks
+heap == free store  //good for storing larger objects
+
+new operator 
+auto ptr = new Person() //new is saying i want to point to something on the free store, heap  //will create a ptr on a stack which points to the heap 
+delete ptr //before ptr is out of scope
+when you forget to delete it causes a memory leak
+
+auto p = Person() //creates person on a stack
+
+smart pointers
+shared pointer 
+will do reference count for you and will delete the object in the free store if ref count is 0
+#include <memory>
+std::shared_ptr<Person> :std::make_shared<Person>("name")//constructor on the end
+auto ptr = std::make_shared<person>("name")//shorter version
+//do not use raw pointers anymore.
+
+
+teacher:Person   // when you inherit you get person's memory plus more memory to add to teacher
+		// you can pass anything from the teacher class to a Person function such as getName() //but you have to promise that teacher will fit in type person
+	       //if you reasign a pointer from teacher to person the pointer is pointing at extra memory which is not there. //possibly what went wrong with find path back home?
+	      
+
+Teacher		|	 		|	Student 	|	Admin Assistant |
+-----------------------------------------------------------------------------------------
+title
+payscale       					id			payscale 
+-----						------			-----------
+getinfo						getid			getters
+						getgrade		pay()
+									accessRecords()
+-----------------------------------------------------------------------------------------
+
+//above derived form type person
+
+Person
+------
+first 
+last 
+-------
+getName
+
+
+staff
+-----------
+payscale 
+-----
+getPay
+pay()
+
+
+
+		->Admin
+Person -> Staff ->Teacher
+       ->Student
+
+//only add inheritence when it will keep you from repeating code
+
+
+
+Project 3
+
+Guild
+----------
+mages 
+warriors 
+rangers 
+paladins
+-----------
+attack()
+
+Mage		Warrior		Paladin		Ranger
+-------------------------------------------------------
+name		name		name		name
+
+
+
+
+
+Attack		Attack		Attack		Attack
+
+
+
+or use inheritance
+
+
+Adventurer
+-----------
+name
+
+
+
+Attack
+
+
+
+
+std::string GetName() const { return _name; } //tells the compiler that we wont change name
+
+
+int a 
+int b 
+
+bool equal
+
+if(a=b)
+equal = true
+
+else 
+equal =False 
+
+terenary operator 
+will convert shorthand to an if else statement 				  
+
+if this is greater than 0         output this 				 //this is the else and output 
+output += _mages.size()	> 0 ? std::to_string(_mages.size()) + " mages\n" : "No mages!\n"; 
+
+
+
+
+
+project 3 hint
+one vector holding a base type
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
