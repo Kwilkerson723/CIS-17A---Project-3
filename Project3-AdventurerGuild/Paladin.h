@@ -9,5 +9,6 @@ public:
 	~Paladin();
 
 	std::string GetName() const { return _name; }
+	std::string Attack() { return _name + " swings a giant maul at his foes!"; }
 };
 

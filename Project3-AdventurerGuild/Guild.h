@@ -21,14 +21,18 @@ public:
 	Guild(std::string name);
 	~Guild();
 
+	std::string GetName() const { return _name; }
 	void AddMage(std::string name);
 	void AddPaladin(std::string name);
 	void AddRanger(std::string name);
 	void AddWarrior(std::string name);
 
-	std::shared_ptr<Mage>	GetMageForAdventure();
-	std::shared_ptr<Paladin> GetPaladinForAdventure();
-	std::shared_ptr<Ranger> GetRangerForAdventure();
-	std::shared_ptr<Warrior> GetWarriorForAdventure();
+	std::string GetInfo();
+
+	std::string AttackWithMages();
+	std::string AttackWithPaladins();
+	std::string AttackWithRangers();
+	std::string AttackWithWarriors();
+	std::string AttackWithAllAdventurers();
 };
 
