@@ -111,7 +111,21 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Adventurer.cpp" />
+    <ClCompile Include="Guild.cpp" />
+    <ClCompile Include="Mage.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="Paladin.cpp" />
+    <ClCompile Include="Ranger.cpp" />
+    <ClCompile Include="Warrior.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Adventurer.h" />
+    <ClInclude Include="Guild.h" />
+    <ClInclude Include="Mage.h" />
+    <ClInclude Include="Paladin.h" />
+    <ClInclude Include="Ranger.h" />
+    <ClInclude Include="Warrior.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
